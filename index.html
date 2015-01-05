@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title>
+	<link href="targil.css"  rel="stylesheet" type="text/css"/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="targil.js"></script>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	
+	<div data-role="header">		
+		<h1>auto rental service</h1>
+		<h2 class="entry">welcome</h2>
+	</div><!-- /header -->
+	
+	<div data-role="content">	
+		<p>welcome to auto rental service. here you can rental a car for each of your needs. al costs
+			and need to know is in here. feel free to explore all the possibilities. </p>
+		
+		<p>Select page:</p>
+		<!--<ul class="list ui-block-a flex" data-role="listview" data-filter="true">
+			
+			<li>
+				<a data-transition="slide" href="#chooseCar">choose a car for rental</a>
+			</li>
+			<li>
+				<a data-transition="slide" href="#loginPage">summarize the costs</a>
+			</li>
+			<li>
+				<a data-transition="slide" href="#calculate">calculate distance</a>
+			</li>
+		</ul>-->
+		<br /> <br /> <br /> <br />
+		<ul class="flex1" data-role="listview" data-filter="true">
+			<li class = "chooseCar">
+				<a data-transition="slide" href="#chooseCar">order now</a>
+			</li>
+			<li>
+				<a data-transition="slide" href="#loginPage">login</a>
+			</li>
+			<li>
+				<a data-transition="slide" href="#signUp">sign up</a>
+			</li>
+			<li class = "returnVehicle">
+				<a data-transition="slide" href="#retuenVehicle">return a vehicle</a>
+			</li>
+		</ul>
+		<br /> <br /> <br /> <br /> <br /> <br /> <br />
+		<p style="text-align:center">all rights reserved to auto rental car service inc@</p><p class = "date" style="text-align:center" id="date">date</p>
+	</div>
+
+</div>
+
+<div data-role="page" id="signUp">
+
+	<div data-role="header">
+		<a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn-left">Back</a>
+		<h1>sign up</h1>
+	</div>
+
+	<div data-role="content">
+		<input class="user" id="user" type="text" placeholder="Name"/>
+		<input class="id" id="id" type="text" placeholder="ID"/>
+		<input class="email" id="email" type="email" placeholder="Email"/>
+		<input class="phone" id="phone" type="tel" placeholder="Phone"/>
+		<input class="pele" id="pele" type="tel" placeholder="Pelephone"/>
+		<input class="birth" id="birth" type="date" placeholder="birth"/>
+		<input class="license" id="license" type="number" placeholder="license no."/>
+		<button id="sign" name="sign">sign up</button>
+	
+	</div>
+	
+</div>
+<div data-role="page" id="chooseCar">
+
+	<div data-role="header">
+		<a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn-left">Back</a>
+		<h1>choose a car for rental</h1>
+	</div>
+
+	<div data-role="content">	
+		<div>
+			
+		</div>
+		
+			<ul class = "carsToChange">
+				<li class = "car1 open"><img src = "car1.jpg"/></li>
+				<li class = "car1"><img src = "car2.jpg"/>  </li>
+				<li class = "car1"><img src = "car3.jpg"/>  </li>
+				<li class = "car1"><img src = "car4.jpg"/>  </li>
+				<li class = "car1"><img src = "car5.jpg"/>  </li>
+				<li class = "car1"><img src = "car6.jpg"/>  </li>
+				<li class = "car1"><img src = "car7.jpg"/>  </li>
+				<li class = "car1"><img src = "car8.jpg"/>  </li>
+				<li class = "car1"><img src = "car9.jpg"/>  </li>
+				<li class = "car1"><img src = "car10.jpg"/>  </li>
+			</ul>
+		
+		
+		
+		<!--img class="car1"  /-->
+		<div class="car1id"></div>
+		<div class="company1"></div>
+		<div class="model1"></div>
+		<div class="year1"></div>
+		<div class="hand1"></div>
+		<div class="auto1"></div>
+		<div class="price"></div>
+		<div>
+			<button class="choosecar1">choose car 1</button>
+			<button class="choosecar2">choose car 2</button>
+			<button class="choosecar3">choose car 3</button>
+			<button class="choosecar4">choose car 4</button>
+			<button class="choosecar5">choose car 5</button>
+			<button class="choosecar6">choose car 6</button>
+			<button class="choosecar7">choose car 7</button>
+			<button class="choosecar8">choose car 8</button>
+			<button class="choosecar9">choose car 9</button>
+			<button class="choosecar10">choose car 10</button>
+		
+			<div id="carDetails">
+				<img class="car2"  />
+				<div class="car2id"></div>
+				<div class="company2"></div>
+				<div class="model2"></div>
+				<div class="year2"></div>
+				<div class="hand2"></div>
+				<div class="auto2"></div>
+				<div class="price2"></div>
+			</div>
+			<div class="procceed"></div>
+		</div>
+
+	</div>
+</div>
+<div data-role="page" id="loginPage">
+
+	<div data-role="header">
+		<a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn-left">Back</a>
+		<h1>login</h1>
+	</div>
+
+	<div data-role="content">	
+		<input class="login" type="text" placeholder="user name" id="user" />
+		<button class="loginbutton" id="login">login</button>
+	</div>
+</div>
+<div data-role="page" id="calculate">
+
+		<div data-role="header">
+			<a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn-left">Back</a>
+			<h1>calculate distance</h1>
+		</div>
+
+		<div data-role="content">	
+		
+    <div id="panel">
+    <b>Start: </b>
+    <input type="text" id="start">
+      
+    <b>End: </b>
+    <input type="text" id="end">
+    <button onclick="calcRoute();">Submit</button>  
+	<div id="distance"></div>
+    </div>
+	
+    <div id="map-canvas"></div>
+ 
+		</div>
+
+</div>
+
+<div data-role="page" id="retuenVehicle">
+
+		<div data-role="header">
+			<a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn-left">Back</a>
+			<h1>return vehicle</h1>
+		</div>
+
+		<div data-role="content">	
+		
+    <div class = "carsToReturn" id="carsToReturn">
+    
+ 
+	</div>
+	<button class = "carsToReturnButton">return a car</button>
+</div>
+
+
+</body>
+</html>
